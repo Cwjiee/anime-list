@@ -1,0 +1,29 @@
+<div class='content w-2/5 min-h-screen my-10 mx-auto text-xl bg-white text-colour rounded-lg'>
+  <div class='container form px-5 py-5 text-center'>
+    <h1 class='my-10 text-[40px] font-semibold'>Log in</h1>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", 
+          class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2" %>
+        </div>
+
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "current-password", placeholder: "password", 
+          class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2" %> 
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+        <div class="actions bg-blue-500 w-1/5 my-10 mx-auto rounded-full py-2">
+            <%= f.submit "Log in", class:"text-white font-semibold hover:cursor-pointer" %>
+        </div>
+      <% end %>
+      <div class="my-10 text-colour text-base">
+        <%= render "devise/shared/links" %>
+      </div>
+  </div>
+</div>
