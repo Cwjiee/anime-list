@@ -1,0 +1,71 @@
+<p style="color: green"><%= notice %></p>
+
+<div class='flex mx-10 mt-10'>
+
+  <div class='inline-block w-2/6'>
+    <% if @anime.image.representable? %>
+      <%= image_tag @anime.image, class: "rounded-lg h-72 mx-auto " %>
+    <% else %>
+      <%= link_to rails_blob_path(file, disposition: "attachment") do %>
+        <%= image_tag "#{@anime.name}", alt: "Download file", class: "rounded-lg h-72" %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class='inline-block mr-10 w-4/6 text'>
+    <h1 class='text-[20px]'>Synopsis</h1><br>
+    <p> <%= @anime.synopsis %> </p>
+  </div>
+
+</div>
+
+<div class='flex mt-10 mx-10'>
+
+  <div class='inline-block w-2/6 px-28 text'>
+    <div class='rounded-lg h-auto bg-white text-center pt-5'>
+        <%= "Title: #{@anime.name}" %><br><br>  
+        <%= "Studios: #{@anime.studios}" %><br><br>
+        <%= "Release date: #{@anime.release_date.strftime("%d/%m/%Y")}" %><br><br>
+        <%= "Average score: #{@anime.average_score}" %><br><br>
+    </div>
+  </div>
+
+  <div class='inline-block w-4/6'>
+    <div class='grid grid-cols-2 grid-rows-2 gap-8'>
+      <div class='character'>
+        Character 1
+      </div>
+      <div class='character'>
+        Character 2
+      </div>
+      <div class='character'>
+        Character 3
+      </div>
+      <div class='character'>
+        Character 4
+      </div>
+    </div>
+  <div>
+
+</div>
+
+<div class='fixed right-10 bottom-5'>
+  <div class='bg-blue-500 py-4 px-5 rounded-xl'>
+    <%= link_to edit_anime_path(@anime) do %>
+      <i class="bi bi-pencil-square text-2xl text-white"></i>
+    <% end %>
+    
+    <%= button_to @anime, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+     <i class="bi bi-trash-fill text-2xl text-white"></i>
+    <% end %> 
+  </div>
+</div>
+
+<div class='fixed left-5 top-5'>
+  <%= link_to animes_path do %>
+    <i class="bi bi-arrow-left-circle text-2xl text-white hover:text-sky-500"></i>
+  <% end %>
+</div>
+
+
+

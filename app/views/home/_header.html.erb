@@ -1,7 +1,7 @@
 <div class="flex w-full flex-row place-content-evenly text-lg text-white header">
     <ul>
         <% if user_signed_in? %>
-            <li class="inline-block mx-10 my-5">Home</li>
+            <li class="inline-block mx-10 my-5"> <%= link_to 'Home', root_path %> </li>
             <li class="inline-block mx-10">Profile</li>
             <li class="inline-block mx-10">Anime List</li>
         <% else %>
@@ -9,5 +9,6 @@
             <li class="inline-block mx-10"> <%= link_to 'Signup', new_user_registration_path, class: 'link' %> </li>
         <% end %>
             <li class="inline-block mx-10">Forum</li>
+            <li class="inline-block mx-10"> <%= link_to 'Browse', animes_path %> </li>
     </ul>
 </div>

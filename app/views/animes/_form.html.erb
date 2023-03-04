@@ -1,0 +1,62 @@
+<%= form_with(model: anime) do |form| %>
+  <% if anime.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(anime.errors.count, "error") %> prohibited this anime from being saved:</h2>
+
+      <ul>
+        <% anime.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :name, placeholder: "name",
+    class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.datetime_field :release_date, placeholder: "release date",
+    class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.text_field :studios, placeholder: "studios",
+    class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.text_field :character1, placeholder: "character 1",
+    class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.text_field :character2, placeholder: "character 2",
+    class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.text_field :character3, placeholder: "character 3",
+    class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.text_field :character4, placeholder: "character 4",
+    class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.text_area :synopsis, placeholder: "synopsis",
+    class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.file_field :image %>
+  </div>
+  <%= form.number_field :user_id, placeholder: "user id", value: current_user.id, type: :hidden %>
+
+  <div class="actions bg-blue-500 w-1/5 my-10 mx-auto rounded-full p-2 text-center">
+    <%= form.submit :"Add", class: "text-white font-semibold hover:cursor-pointer" %>
+  </div>
+<% end %>
