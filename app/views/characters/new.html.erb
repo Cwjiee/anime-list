@@ -1,0 +1,13 @@
+<div class='content w-2/5 min-h-screen my-10 mx-auto text-xl bg-white text-colour rounded-lg'>
+  <div class='container form px-5 py-5 text-center'>
+    <h2 class='my-10 text-[40px] font-semibold'>New character</h2>
+
+    <%= render "form", character: @character %>
+
+    <br>
+
+    <div>
+      <%= link_to "Back to characters", characters_path %>
+    </div>
+  </div>
+</div>

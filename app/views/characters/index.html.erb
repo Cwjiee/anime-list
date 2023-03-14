@@ -1,14 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
+<h1 class="text-2xl ml-20 mt-10">Characters</h1>
+
 <div class='relative mx-10'>
-  <div id="animes" class='grid-flow-row auto-rows-auto space-between mt-10 ml-10'>
-    <% @animes.each do |anime| %>
-      <%= render anime %>
+  <div id="characters" class='grid-flow-row auto-rows-auto space-between mt-10 ml-10'>
+    <% @characters.each do |character| %>
+      <%= render character %>
     <% end %>
   </div>
 
   <div class='fixed right-10 bottom-5'>
-    <%= link_to new_anime_path do %>
+    <%= link_to new_character_path do %>
       <div class='bg-blue-500 py-4 px-5 rounded-xl'>
         <i class="bi bi-plus-lg text-2xl text-white"></i>
       </div>

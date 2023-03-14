@@ -31,19 +31,26 @@
   </div>
 
   <div class='inline-block w-4/6'>
-    <div class='grid grid-cols-2 grid-rows-2 gap-8'>
-      <div class='character'>
-        Character 1
-      </div>
-      <div class='character'>
-        Character 2
-      </div>
-      <div class='character'>
-        Character 3
-      </div>
-      <div class='character'>
-        Character 4
-      </div>
+    <div class='grid grid-cols-2 grid-rows-2 gap-8 justify-evenly '>
+      <% @anime.characters.each do |character| %>
+
+        <div class='character flex w-4/6 rounded-lg justify-content-center mx-auto'>
+          <div class="inline-block"> 
+            <% if character.image.representable? %>
+              <%= image_tag character.image, class: "rounded-lg h-56" %>
+            <% else %>
+              <%= link_to rails_blob_path(character, disposition: "attachment") do %>
+                <%= image_tag "#{character.name}", alt: "Download file" %>
+              <% end %>
+            <% end %>
+          </div>
+
+          <div class="inline-block self-end text-center justify-self-center">
+            <%= character.name %>
+          </div>
+        </div>
+
+      <% end %>
     </div>
   <div>
 

@@ -1,0 +1,35 @@
+<%= form_with(model: character) do |form| %>
+  <% if character.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(character.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+        <% character.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.collection_select :anime_id, @animes, :id, :name, {}, {class: "px-5 h-10 my-2 rounded-xl gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black"}  %>
+  </div>
+
+  <div>
+    <%= form.text_field :name, placeholder: "name", autocomplete: :off,
+    class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.text_area :info, placeholder: "info",
+    class: "px-5 w-4/5 h-40 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.file_field :image, class: "my-5" %>
+  </div>
+
+  <div class="actions bg-blue-500 w-1/5 my-10 mx-auto rounded-full p-2 text-center">
+    <%= form.submit :"Add", class: "text-white font-semibold hover:cursor-pointer" %>
+  </div>
+<% end %>

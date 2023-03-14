@@ -1,0 +1,40 @@
+<p style="color: green"><%= notice %></p>
+
+<%# top part %>
+<div class='flex mx-10 mt-10'>
+
+  <div class='inline-block w-2/6'>
+    <% if @character.image.representable? %>
+      <%= image_tag @character.image, class: "rounded-lg h-72 mx-auto " %>
+    <% else %>
+      <%= link_to rails_blob_path(character, disposition: "attachment") do %>
+        <%= image_tag "#{@character.name}", alt: "Download file", class: "rounded-lg h-72" %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class='inline-block mr-10 w-4/6 text'>
+    <h1 class='text-[20px]'>Info</h1><br>
+    <p> <%= @character.info %> </p>
+  </div>
+
+</div>
+
+<%# buttons %>
+<div class='fixed right-10 bottom-5'>
+  <div class='bg-blue-500 py-4 px-5 rounded-xl'>
+    <%= link_to edit_character_path(@character) do %>
+      <i class="bi bi-pencil-square text-2xl text-white"></i>
+    <% end %>
+    
+    <%= button_to @character, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+     <i class="bi bi-trash-fill text-2xl text-white"></i>
+    <% end %> 
+  </div>
+</div>
+
+<div class='fixed left-5 top-5'>
+  <%= link_to characters_path do %>
+    <i class="bi bi-arrow-left-circle text-2xl text-white hover:text-sky-500"></i>
+  <% end %>
+</div>

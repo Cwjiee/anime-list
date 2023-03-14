@@ -4,7 +4,7 @@
     <% if anime.image.representable? %>
       <%= image_tag anime.image, class: "rounded-lg" %>
     <% else %>
-      <%= link_to rails_blob_path(file, disposition: "attachment") do %>
+      <%= link_to rails_blob_path(anime, disposition: "attachment") do %>
         <%= image_tag "#{anime.name}", alt: "Download file" %>
       <% end %>
     <% end %>

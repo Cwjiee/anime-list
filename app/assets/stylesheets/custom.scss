@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$bg-color: rgb(229,235,241);
+$bg-gray: rgb(229,235,241);
+$text-color: rgb(146,153,161);
 
 *{
     padding: 0;
@@ -8,23 +11,52 @@
 }
 
 body {
-    background: rgb(229,235,241);
+    background: $bg-gray;
 }
 
 .text-colour{
-    color: rgb(146,153,161);
+    color: $text-color;
 }
 
 .gray {
-    background: rgb(229,235,241);
+    background: $bg-color;
 }
 
 .header {
     
     background-color: rgb(8, 38, 56);
 
-    li{
+    div{
         color: rgb(152, 161, 165);
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    .dropdown-content {
+        a{
+            float: none;
+            color: black;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            padding: 5px 10px;
+        }
+       
+        a:hover{
+            background-color: $bg-gray;
+        }
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 
     .link{
@@ -37,7 +69,7 @@ body {
     }
 }
 
-#animes {
+#animes, #characters {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

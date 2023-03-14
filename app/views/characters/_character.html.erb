@@ -1,0 +1,15 @@
+<%= link_to character do %>
+  <div id="<%= dom_id character %>" class='h-72 m-4 text-center'>
+
+    <% if character.image.representable? %>
+      <%= image_tag character.image, class: "rounded-lg" %>
+    <% else %>
+      <%= link_to rails_blob_path(character, disposition: "attachment") do %>
+        <%= image_tag "#{character.name}", alt: "Download file" %>
+      <% end %>
+    <% end %>
+    <div>
+      <%= character.name %>
+    </div>
+  </div>
+<% end %>
