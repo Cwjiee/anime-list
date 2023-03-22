@@ -1,0 +1,17 @@
+<%= link_to anime_path(@anime) do %>
+  <div id="<%= dom_id list %>" class='h-72 m-4 text-center'>
+
+    <% if list.anime.image.representable? %>
+      <%= image_tag list.anime.image, class: "rounded-lg" %>
+    <% else %>
+      <%= link_to rails_blob_path(anime, disposition: "attachment") do %>
+        <%= image_tag "#{list.anime.name}", alt: "Download file" %>
+      <% end %>
+    <% end %>
+    <div>
+      <%= list.name %>
+      <%= list.score %>
+    </div>
+  </div>
+<% end %>
+

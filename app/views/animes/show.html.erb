@@ -21,12 +21,17 @@
 
 <div class='flex mt-10 mx-10'>
 
-  <div class='inline-block w-2/6 px-28 text'>
+  <div class='inline-block w-2/6 px-28 text text-center'>
+    
+    <div class="mb-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <%= link_to "Add to list", new_anime_list_path(@anime) %>
+    </div>
+
     <div class='rounded-lg h-auto bg-white text-center pt-5'>
-        <%= "Title: #{@anime.name}" %><br><br>  
-        <%= "Studios: #{@anime.studios}" %><br><br>
-        <%= "Release date: #{@anime.release_date.strftime("%d/%m/%Y")}" %><br><br>
-        <%= "Average score: #{@anime.average_score}" %><br><br>
+      <%= "Title: #{@anime.name}" %><br><br>  
+      <%= "Studios: #{@anime.studios}" %><br><br>
+      <%= "Release date: #{@anime.release_date.strftime("%d/%m/%Y")}" %><br><br>
+      <%= "Average score: #{@anime.average_score}" %><br><br>
     </div>
   </div>
 

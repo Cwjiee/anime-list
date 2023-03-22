@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  resources :characters
-  devise_for :users 
   root 'home#index'
+  resources :characters
+  devise_for :users
+  resources :lists, except: %i[new]
   scope '/search' do
-    resources :animes, :characters
+    resources :animes do
+      resources :lists, only: %i[new]
+    end
+    resources :characters
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

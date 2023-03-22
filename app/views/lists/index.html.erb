@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<div class='relative mx-10'>
+  <div id="lists" class='grid-flow-row auto-rows-auto space-between mt-10 ml-10'>
+    <% @lists.each do |list| %>
+        <%= render list %> 
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class='content w-2/5 min-h-screen my-10 mx-auto text-xl bg-white text-colour rounded-lg'>
+  <div class='container form px-5 py-5 text-center'>
+    <h2 class='my-10 text-[40px] font-semibold'>Add to list</h2>
+
+      <%= render "form", list: @list %>
+
+      <br>
+
+      <div>
+        <%= link_to "Back to animes", lists_path %>
+      </div>
+
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<%= form_with(model: list) do |form| %>
+  <% if list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+        <% list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :anime_id, value: @anime.id, type: :hidden %>
+  </div>
+
+  <div>
+    <%= form.text_field :name, value: "#{@anime.name}", type: :hidden %>
+  </div>
+
+  <div>
+    <%= form.select :status, ["Watching", "Drop", "Plan to watch", "Completed"], {},
+    {class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black"} %>
+  </div>
+
+  <div>
+    <%= form.number_field :price, placeholder: "score", in: 1.0..10.0, step: 0.5,
+    class: "px-5 w-4/5 h-10 my-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.label :start_date, style: "display: block", class: "" %>
+    <%= form.datetime_field :start_date,
+    class: "px-5 w-4/5 h-10 mb-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <div>
+    <%= form.label :finish_date, style: "display: block", class: "mt-5" %>
+    <%= form.datetime_field :finish_date,
+    class: "px-5 w-4/5 h-10 mb-5 rounded gray focus:outline-none focus:border-sky-500 focus:border-sky-600 focus:ring-2 text-black" %>
+  </div>
+
+  <%= form.hidden_field :user_id, value: current_user.id %>
+
+  <div class="actions bg-blue-500 w-1/5 my-5 mx-auto rounded-full p-2 text-center">
+    <%= form.submit :"Add", class: "text-white font-semibold hover:cursor-pointer" %>
+  </div>
+<% end %>

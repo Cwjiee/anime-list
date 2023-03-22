@@ -66,6 +66,6 @@ class AnimesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def anime_params
-      params.require(:anime).permit(:name, :release_date, :studios, :character1, :character2, :character3, :character4, :user_id, :image, :synopsis)
+      params.require(:anime).permit(:name, :release_date, :studios, :user_id, :image, :synopsis)
     end
 end
