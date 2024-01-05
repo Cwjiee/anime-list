@@ -72,7 +72,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem "simplecov"
+  gem "simplecov", require: false
 end
 
 gem 'devise', github: 'heartcombo/devise', branch: 'main'
