@@ -25,5 +25,5 @@ jobs:
       - name: Set up database schema
         run: bin/rails db:migrate
       # Add or replace test runners here
-      - name: Run tests
-        run: bin/rake
+      - name: Run rspec tests
+        run: bundle exec rspec

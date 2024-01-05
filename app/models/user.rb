@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_one :list
   has_many :animes, through: :list
 
+  validates :email, presence: true
+  validates :username, presence: true
 end
