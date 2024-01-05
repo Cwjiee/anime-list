@@ -2,7 +2,8 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  
+  ENV['OYENCOV_API_KEY']='97552dd2b57f368ca70f35cf'
   # Code is not reloaded between requests.
   config.enable_reloading = false
 
