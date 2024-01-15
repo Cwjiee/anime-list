@@ -29,5 +29,5 @@ jobs:
         run: bundle exec rspec
       - run: bundle exec oyencov translate_simplecov
       - run: bundle exec oyencov submit --git-commit-sha $GITHUB_SHA
-        env: 
-          OYENCOV_API_KEY: ${{ secrets.OYENCOV_API_KEY }}
+        # env: 
+          # OYENCOV_API_KEY: ${{ secrets.OYENCOV_API_KEY }}
