@@ -2,6 +2,6 @@
 require_relative "application"
 require 'oyencov'
 
-ENV['OYENCOV_ENV']='production'
+ENV['OYENCOV_MODE']='production'
 # Initialize the Rails application.
 Rails.application.initialize!
