@@ -5,7 +5,7 @@
         "lines": [
           1,
           null,
-          1,
+          0,
           null
         ]
       },
@@ -17,7 +17,7 @@
           1,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null,
@@ -37,23 +37,19 @@
           null,
           null,
           null,
-          null,
-          1,
           null,
           0,
           null,
-          1,
+          0,
           null,
-          1,
+          0,
           null,
-          null,
-          null,
-          null,
-          1,
+          0,
           null,
           null,
           null,
           null,
+          0,
           null,
           null,
           null,
@@ -67,10 +63,14 @@
           null,
           null,
           null,
-          1,
           null,
           null,
-          1,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
           null,
           null,
           null
@@ -90,6 +90,10 @@
           1,
           null,
           1,
+          null,
+          1,
+          0,
+          null,
           null,
           null,
           null,
@@ -124,15 +128,10 @@
           1
         ]
       },
-      "/home/weijie/code/anime-list/config/environments/test.rb": {
+      "/home/weijie/code/anime-list/config/environments/production.rb": {
         "lines": [
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
           null,
           null,
@@ -151,21 +150,11 @@
           null,
           null,
           null,
-          null,
-          1,
-          1,
           1,
           null,
           null,
-          1,
           null,
           null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
           null,
           null,
           null,
@@ -173,10 +162,11 @@
           1,
           null,
           null,
-          1,
           null,
           null,
-          1,
+          null,
+          null,
+          null,
           null,
           null,
           1,
@@ -188,7 +178,54 @@
           null,
           null,
           null,
+          null,
+          null,
+          null,
           1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -930,79 +967,18 @@
           null
         ]
       },
-      "/home/weijie/code/anime-list/app/helpers/animes_helper.rb": {
+      "/home/weijie/code/anime-list/app/channels/application_cable/channel.rb": {
         "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/weijie/code/anime-list/app/helpers/application_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/weijie/code/anime-list/app/helpers/characters_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/weijie/code/anime-list/app/helpers/home_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/weijie/code/anime-list/app/helpers/lists_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/weijie/code/anime-list/app/models/anime.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/weijie/code/anime-list/spec/models/user_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          4,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
           1,
           1,
           null,
           null
         ]
       },
-      "/home/weijie/code/anime-list/spec/requests/animes_spec.rb": {
+      "/home/weijie/code/anime-list/app/channels/application_cable/connection.rb": {
         "lines": [
           1,
-          null,
           1,
-          1,
-          1,
-          1,
-          1,
-          null,
           null,
           null
         ]
@@ -1015,7 +991,7 @@
           null,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null,
@@ -1094,8 +1070,251 @@
           null,
           null
         ]
+      },
+      "/home/weijie/code/anime-list/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/helpers/animes_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/helpers/characters_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/helpers/home_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/helpers/lists_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/controllers/characters_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/controllers/home_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/controllers/lists_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/mailers/application_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/models/anime.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/models/character.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/weijie/code/anime-list/app/models/list.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1704458399
+    "timestamp": 1705435542
   }
 }
