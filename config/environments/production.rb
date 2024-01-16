@@ -1,6 +1,6 @@
 require "active_support/core_ext/integer/time"
 require "oyencov"
-OyenCov::Configuration.ENV_PARAMETERS['MODE']="production"
+OyenCov.new
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
