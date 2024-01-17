@@ -6,8 +6,9 @@ require "rails/all"
 Bundler.require(*Rails.groups)
 
 # Load dotenv only in development or test environment
-Dotenv::Railtie.load
-puts "after : #{ENV['OYENCOV_MODE'].inspect}"
+if ['development', 'test'].include? ENV['RAILS_ENV']
+  Dotenv::Railtie.load
+end
 
 module AnimeList
   class Application < Rails::Application
