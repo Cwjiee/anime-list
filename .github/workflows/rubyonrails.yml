@@ -27,6 +27,7 @@ jobs:
       # Add or replace test runners here
       - name: Run rspec tests
         run: bundle exec rspec
+      - run: echo ${{ secrets.OYENCOV_API_KEY }}
       - run: bundle exec oyencov translate_simplecov
       - run: bundle exec oyencov submit --git-commit-sha $GITHUB_SHA
         env: 
