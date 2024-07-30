@@ -31,4 +31,3 @@ jobs:
       - run: bundle exec oyencov submit --git-commit-sha $GITHUB_SHA
         env: 
           OYENCOV_API_KEY: ${{ secrets.OYENCOV_API_KEY }}
-          OYENCOV_API_URL: http://telemetry-api.oyencov.localhost:3088/v1
