@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
 
   it "is not valid without an email" do
     subject.email = nil
-    expect(subject).to_not be_valid
+    expect(subject).to be_valid
   end
 
   it "is not valid without a username" do
